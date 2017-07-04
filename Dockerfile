@@ -13,6 +13,6 @@ RUN apk --no-cache add curl tar && \
 
 EXPOSE 80
 
-COPY nginx.conf opt/docker/etc/nginx/conf.d/dokuwiki.conf
+COPY nginx.conf /opt/docker/etc/nginx/conf.d/dokuwiki.conf
 
 VOLUME ["/app/conf","/app/data/attic","/app/data/media","/app/data/media_attic","/app/data/media_meta","/app/data/meta","/app/data/pages","/app/lib/plugins","/app/lib/tpl"]
