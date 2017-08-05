@@ -1,4 +1,5 @@
-FROM webdevops/php-nginx:alpine
+FROM webdevops/php-nginx:alpine-php7
+LABEL maintainer "Kyle Lucy <kmlucy@gmail.com>"
 
 COPY nginx.conf /opt/docker/etc/nginx/conf.d/dokuwiki.conf
 COPY setup.sh /setup.sh
