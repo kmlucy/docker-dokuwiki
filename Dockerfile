@@ -18,4 +18,4 @@ RUN apk --no-cache add curl tar && \
 
 EXPOSE 80
 
-VOLUME ["/app/conf","/app/data/attic","/app/data/media","/app/data/media_attic","/app/data/media_meta","/app/data/meta","/app/data/pages","/app/lib/plugins","/app/lib/tpl"]
+VOLUME ["/app/conf","/app/data","/app/lib/plugins","/app/lib/tpl"]
