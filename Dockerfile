@@ -4,8 +4,6 @@ LABEL maintainer "Kyle Lucy <kmlucy@gmail.com>"
 COPY nginx.conf /opt/docker/etc/nginx/conf.d/dokuwiki.conf
 COPY setup.sh /setup.sh
 
-RUN sed -i -e 's/v3\.5/edge/g' /etc/apk/repositories && apk upgrade --update-cache --available
-
 RUN apk --no-cache add curl tar && \
 	cd /app && \
 	curl -O -L  "https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz" && \
