@@ -12,7 +12,8 @@ RUN apk --no-cache add curl tar && \
 	chown -R application:nogroup /app && \
 	sed -i 's/user nginx/user application/' /opt/docker/etc/nginx/nginx.conf && \
 	sed -i 's=/etc/nginx/conf.d=/opt/docker/etc/nginx/conf.d=' /opt/docker/etc/nginx/nginx.conf && \
-	chmod +x /setup.sh
+	chmod +x /setup.sh && \
+	chown -R application:nogroup /var/tmp/nginx/
 
 EXPOSE 80
 
