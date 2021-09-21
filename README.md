@@ -10,7 +10,7 @@ docker run -d \
   -v /opt/dokuwiki/lib/plugins:/app/lib/plugins \
   -v /opt/dokuwiki/lib/tpl:/app/lib/tpl \
   -p 8000:80 \
-  kmlucy/docker-dokuwiki /setup.sh
+  ghcr.io/kmlucy/docker-dokuwiki /setup.sh
 ```
 Then navigate to http://ip-addr:8000/install.php. Go through the install wizard until you get the `Continue to your new DokuWiki` message. You can then stop and remove the container:
 ```
@@ -27,7 +27,7 @@ docker run -d \
   -v /opt/dokuwiki/lib/plugins:/app/lib/plugins \
   -v /opt/dokuwiki/lib/tpl:/app/lib/tpl \
   -p 8000:80 \
-  kmlucy/docker-dokuwiki
+  ghcr.io/kmlucy/docker-dokuwiki
 ```
 
 Based on [webdevops/php-nginx](https://github.com/webdevops/Dockerfile)
