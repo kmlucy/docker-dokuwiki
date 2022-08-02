@@ -1,4 +1,4 @@
-FROM webdevops/php-nginx:alpine-php7
+FROM webdevops/php-nginx:8.0-alpine
 LABEL maintainer "Kyle Lucy <kmlucy@gmail.com>"
 
 COPY nginx.conf /opt/docker/etc/nginx/conf.d/dokuwiki.conf
@@ -14,7 +14,6 @@ RUN apk --no-cache add curl tar && \
 	sed -i 's/user nginx/user application/' /opt/docker/etc/nginx/nginx.conf && \
 	sed -i 's=/etc/nginx/conf.d=/opt/docker/etc/nginx/conf.d=' /opt/docker/etc/nginx/nginx.conf && \
 	chmod +x /setup.sh /update_lib.sh && \
-	chown -R application:nogroup /var/tmp/nginx/ && \
 	mkdir -p /tmp/dokuwiki/plugins && \
 	mkdir -p /tmp/dokuwiki/tpl && \
 	rsync -aE /app/lib/plugins/ /tmp/dokuwiki/plugins/ && \
