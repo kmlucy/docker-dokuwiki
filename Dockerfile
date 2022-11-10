@@ -11,6 +11,7 @@ RUN apk --no-cache add curl tar && \
 	tar -xzf "dokuwiki-stable.tgz" --strip 1 && \
 	rm "dokuwiki-stable.tgz" && \
 	chown -R application:nogroup /app && \
+	chown -R application:nogroup /var/lib/nginx && \
 	sed -i 's/user nginx/user application/' /opt/docker/etc/nginx/nginx.conf && \
 	sed -i 's=/etc/nginx/conf.d=/opt/docker/etc/nginx/conf.d=' /opt/docker/etc/nginx/nginx.conf && \
 	chmod +x /setup.sh /update_lib.sh && \
