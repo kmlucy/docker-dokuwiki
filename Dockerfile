@@ -1,4 +1,4 @@
-FROM webdevops/php-nginx:8.0-alpine
+FROM webdevops/php-nginx:8.3-alpine
 LABEL maintainer "Kyle Lucy <kmlucy@gmail.com>"
 
 COPY nginx.conf /opt/docker/etc/nginx/conf.d/dokuwiki.conf
