@@ -13,4 +13,5 @@ comm -12 <(find /app/lib/tpl/ -maxdepth 1 -mindepth 1 -type d -print | sort -d) 
 cp -r /tmp/dokuwiki/tpl/* /app/lib/tpl/
 
 # Clean Up
+chown application:nogroup -R /app/lib/tpl/* /app/lib/plugins/*
 rm -rf /tmp/dokuwiki
