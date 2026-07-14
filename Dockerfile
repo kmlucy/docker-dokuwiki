@@ -1,5 +1,5 @@
-FROM webdevops/php-nginx:8.3-alpine
-LABEL maintainer "Kyle Lucy <kmlucy@gmail.com>"
+FROM webdevops/php-nginx:8.5-alpine
+LABEL maintainer="Kyle Lucy <kmlucy@gmail.com>"
 
 COPY nginx.conf /opt/docker/etc/nginx/conf.d/dokuwiki.conf
 COPY setup.sh /setup.sh
